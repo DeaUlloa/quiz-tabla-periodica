@@ -1,17 +1,18 @@
 
 import streamlit as st
 import random
+import streamlit.components.v1 as components
 
 # Diccionario de elementos del 1 al 40
 elementos = {
     "H": "Hidrogeno", "He": "Helio", "Li": "Litio", "Be": "Berilio", "B": "Boro",
-    "C": "Carbono", "N": "Nitrogeno", "O": "Oxígeno", "F": "Fluor", "Ne": "Neon",
+    "C": "Carbono", "N": "Nitrogeno", "O": "Oxigeno", "F": "Fluor", "Ne": "Neon",
     "Na": "Sodio", "Mg": "Magnesio", "Al": "Aluminio", "Si": "Silicio", "P": "Fosforo",
     "S": "Azufre", "Cl": "Cloro", "Ar": "Argon", "K": "Potasio", "Ca": "Calcio",
     "Sc": "Escandio", "Ti": "Titanio", "V": "Vanadio", "Cr": "Cromo", "Mn": "Manganeso",
     "Fe": "Hierro", "Co": "Cobalto", "Ni": "Níquel", "Cu": "Cobre", "Zn": "Zinc",
     "Ga": "Galio", "Ge": "Germanio", "As": "Arsenico", "Se": "Selenio", "Br": "Bromo",
-    "Kr": "Kripton", "Rb": "Rubidio", "Sr": "Estroncio", "Y": "Itrio", "Zr": "Circonio"
+    "Kr": "Kripton", "Rb": "Rubidio", "Sr": "Estroncio", "Y": "Itrio", "Zr": "Zirconio"
 }
 
 # Lista para manipulación
@@ -77,9 +78,8 @@ if st.session_state.mostrar_resultados:
 
     st.info(f"🏁 Puntuación final: **{aciertos} / 40** aciertos.")
 
-# Botón de reinicio
-import streamlit.components.v1 as components
-if st.button("🔁 Actualizar"):
+# Botón de Refresco
+if st.button("🔁 Nuevo Intento"):
     components.html(
         "<script>window.location.reload();</script>",
         height=0,
