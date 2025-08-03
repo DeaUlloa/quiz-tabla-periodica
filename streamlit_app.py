@@ -10,7 +10,7 @@ elementos = {
     "Na": "Sodio", "Mg": "Magnesio", "Al": "Aluminio", "Si": "Silicio", "P": "Fosforo",
     "S": "Azufre", "Cl": "Cloro", "Ar": "Argon", "K": "Potasio", "Ca": "Calcio",
     "Sc": "Escandio", "Ti": "Titanio", "V": "Vanadio", "Cr": "Cromo", "Mn": "Manganeso",
-    "Fe": "Hierro", "Co": "Cobalto", "Ni": "Níquel", "Cu": "Cobre", "Zn": "Zinc",
+    "Fe": "Hierro", "Co": "Cobalto", "Ni": "Niquel", "Cu": "Cobre", "Zn": "Zinc",
     "Ga": "Galio", "Ge": "Germanio", "As": "Arsenico", "Se": "Selenio", "Br": "Bromo",
     "Kr": "Kripton", "Rb": "Rubidio", "Sr": "Estroncio", "Y": "Itrio", "Zr": "Zirconio"
 }
@@ -80,8 +80,4 @@ if st.session_state.mostrar_resultados:
 
 # Botón de Refresco
 if st.button("🔁 Nuevo Intento"):
-    components.html(
-        "<script>window.location.reload();</script>",
-        height=0,
-        width=0
-    )
+    st.experimental_set_query_params(reload=random.randint(0, 10000))
