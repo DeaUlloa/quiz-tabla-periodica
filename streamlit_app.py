@@ -4,14 +4,14 @@ import random
 
 # Diccionario de elementos del 1 al 40
 elementos = {
-    "H": "Hidrógeno", "He": "Helio", "Li": "Litio", "Be": "Berilio", "B": "Boro",
-    "C": "Carbono", "N": "Nitrógeno", "O": "Oxígeno", "F": "Flúor", "Ne": "Neón",
-    "Na": "Sodio", "Mg": "Magnesio", "Al": "Aluminio", "Si": "Silicio", "P": "Fósforo",
-    "S": "Azufre", "Cl": "Cloro", "Ar": "Argón", "K": "Potasio", "Ca": "Calcio",
+    "H": "Hidrogeno", "He": "Helio", "Li": "Litio", "Be": "Berilio", "B": "Boro",
+    "C": "Carbono", "N": "Nitrogeno", "O": "Oxígeno", "F": "Fluor", "Ne": "Neon",
+    "Na": "Sodio", "Mg": "Magnesio", "Al": "Aluminio", "Si": "Silicio", "P": "Fosforo",
+    "S": "Azufre", "Cl": "Cloro", "Ar": "Argon", "K": "Potasio", "Ca": "Calcio",
     "Sc": "Escandio", "Ti": "Titanio", "V": "Vanadio", "Cr": "Cromo", "Mn": "Manganeso",
     "Fe": "Hierro", "Co": "Cobalto", "Ni": "Níquel", "Cu": "Cobre", "Zn": "Zinc",
-    "Ga": "Galio", "Ge": "Germanio", "As": "Arsénico", "Se": "Selenio", "Br": "Bromo",
-    "Kr": "Kriptón", "Rb": "Rubidio", "Sr": "Estroncio", "Y": "Itrio", "Zr": "Circonio"
+    "Ga": "Galio", "Ge": "Germanio", "As": "Arsenico", "Se": "Selenio", "Br": "Bromo",
+    "Kr": "Kripton", "Rb": "Rubidio", "Sr": "Estroncio", "Y": "Itrio", "Zr": "Circonio"
 }
 
 # Lista para manipulación
@@ -78,10 +78,10 @@ if st.session_state.mostrar_resultados:
     st.info(f"🏁 Puntuación final: **{aciertos} / 40** aciertos.")
 
 # Botón de reinicio
-if st.button("🔁 Reintentar"):
-    st.session_state.preguntas_simbolo = random.sample(elementos_lista, 20)
-    st.session_state.preguntas_nombre = random.sample(elementos_lista, 20)
-    st.session_state.respuestas_simbolo = [""] * 20
-    st.session_state.respuestas_nombre = [""] * 20
-    st.session_state.mostrar_resultados = False
-    st.experimental_rerun()
+import streamlit.components.v1 as components
+if st.button("🔁 Actualizar"):
+    components.html(
+        "<script>window.location.reload();</script>",
+        height=0,
+        width=0
+    )
