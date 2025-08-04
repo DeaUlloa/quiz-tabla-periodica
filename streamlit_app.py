@@ -80,7 +80,6 @@ if st.session_state.mostrar_resultados:
 
 # Botón de Refresco
 if st.button("🔁 Nuevo Intento"):
-    # Limpiar variables de sesión
     for key in list(st.session_state.keys()):
         del st.session_state[key]
-    st.experimental_rerun()  # Reinicia la app con el estado limpio
+    st.rerun()
