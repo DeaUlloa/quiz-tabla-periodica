@@ -30,7 +30,7 @@ st.title("🔬 Quiz Tabla Periódica (Elementos del 1 al 40)")
 st.markdown("""
 Este quiz contiene **40 preguntas** sobre los primeros elementos químicos de la tabla periódica.
 
-- **Cuando Escribas deben colocar la primera letra en Mayúscula luego Minúsculas**
+☛ **Cuando Escribas deben colocar la primera letra en Mayúscula luego Minúsculas** ☚
 
 **¡Mucha suerte!**
 """)
