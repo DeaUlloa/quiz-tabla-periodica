@@ -79,16 +79,16 @@ if st.session_state.mostrar_resultados:
     st.info(f"🏁 Puntuación final: **{aciertos} / 40** aciertos.")
 
 # Botón de Refresco
-if st.button("🔁 Nuevo Intento"):
-    components.html(
-        """
-        <script>
-            function reload() {
-                window.location.href = window.location.href.split("?")[0];
-            }
-            setTimeout(reload, 100);
-        </script>
-        """,
-        height=0,
-        width=0,
-    )
+#if st.button("🔁 Nuevo Intento"):
+#   components.html(
+#        """
+#        <script>
+#            function reload() {
+#                window.location.href = window.location.href.split("?")[0];
+#            }
+#            setTimeout(reload, 100);
+#        </script>
+#        """,
+#        height=0,
+#        width=0,
+#    )
