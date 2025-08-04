@@ -1,7 +1,7 @@
 
 import streamlit as st
 import random
-import streamlit.components.v1 as components
+#import streamlit.components.v1 as components
 
 # Diccionario de elementos del 1 al 40
 elementos = {
