@@ -1,10 +1,6 @@
 
 import streamlit as st
 import random
-from PIL import Image
-
-banner = Image.open("quimik.jpg")
-st.image(banner, use_column_width=True)
 
 # Diccionario de elementos del 1 al 40
 elementos = {
